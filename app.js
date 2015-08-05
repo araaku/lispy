@@ -6,7 +6,7 @@ var play = require('play');
 var exec = require('child_process').exec;
 
 var api = "http://translate.google.com/translate_tts?tl=en"; // path of the API to convert Text to Speach
-var targetFrom = "arun.saini@laitkor.com"; // leave empty if you want the app to read all messages
+var targetFrom = ""; // leave empty if you want the app to read all messages
 var messageThreshold = -1; //Number of recent messages to be read from INBOX. Negative sigh means Most Recent.
 var cmd = 'vlc --qt-start-minimized #file# vlc://quit'; // command to play the mp3 file. #file# will be replaced with actual file name
 
@@ -46,8 +46,8 @@ function lispyMessage() {
 var client = inbox.createConnection(false, "imap.gmail.com", {
     secureConnection: true,
     auth: {
-        user: "mail4@laitkor.com",
-        pass: "lisp!@%)"
+        user: "<your email address>",
+        pass: "<password>"
     },
     debug: false
 });
